@@ -1,11 +1,12 @@
 library(dplyr)
+synapser::synLogin()
+
 rosmap_exp <- 'syn26967454'
 rosmap_meta <- 'syn26967450'
-
 parentid_rosmap <- 'syn27332835'
 
 rosmap <- data.table::fread(synapser::synGet(rosmap_exp)$path, header = T, sep='\t') %>%
-  column_to_rownames('feature') %>%
+  tibble::column_to_rownames('feature') %>%
   as.matrix() %>%
   data.frame()
 colnames(rosmap) <- gsub('^X','',colnames(rosmap))
@@ -17,7 +18,7 @@ colnames(rosmap) <- gsub('Sample_324.120501','Sample_324-120501',colnames(rosmap
 colnames(rosmap) <- gsub('Sample_161.120423','Sample_161-120423',colnames(rosmap))
 
 rm_cov <- data.table::fread(synapser::synGet(rosmap_meta)$path, header = T, sep='\t') %>%
-  column_to_rownames('specimenID') %>%
+  tibble::column_to_rownames('specimenID') %>%
   data.frame()
 
 # DLPFC
