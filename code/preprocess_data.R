@@ -58,6 +58,7 @@ thisFile <- githubr::getPermlink(repository = thisRepo, repositoryPath=paste0('c
 activityName <- 'DLPFC Expression'
 activityDescription <- 'Winzorized DLPFC Expression for metanetwork analysis'
 
+dlpfc <- round(dlpfc, 6)
 dlpfc <- tibble::rownames_to_column(as.data.frame(dlpfc), var='feature')
 write.table(dlpfc, file = 'dlpfc.tsv', sep ='\t', row.names = F, col.names = T, quote = F)
 
@@ -81,6 +82,7 @@ file.remove('dlpfc.tsv')
 activityName <- 'ACC Expression'
 activityDescription <- 'Winzorized ACC Expression for metanetwork analysis'
 
+acc <- round(acc, 6)
 acc <- tibble::rownames_to_column(as.data.frame(acc), var='feature')
 write.table(acc, file = 'acc.tsv', sep ='\t',  row.names = F, col.names = T, quote = F)
 
@@ -104,6 +106,7 @@ file.remove('acc.tsv')
 activityName <- 'PCC Expression'
 activityDescription <- 'Winzorized PCC Expression for metanetwork analysis'
 
+pcc <- round(pcc, 6)
 pcc <- tibble::rownames_to_column(as.data.frame(pcc), var='feature')
 write.table(pcc, file = 'pcc.tsv', sep ='\t', row.names = F, col.names = T, quote = F)
 
