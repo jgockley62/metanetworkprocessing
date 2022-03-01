@@ -61,7 +61,7 @@ dlpfc <- tibble::rownames_to_column(as.data.frame(dlpfc), var='feature')
 write.table(dlpfc, file = 'dlpfc.tsv', row.names = F, col.names = T, quote = F)
 
 ENRICH_OBJ <- synapser::synStore( synapser::File( 
-    path='DLPFC Expression', 
+    path='dlpfc.tsv', 
     name = 'DLPFC Expression',
     parentId=parentid_rosmap ),
   used = syns_used, 
@@ -84,7 +84,7 @@ acc <- tibble::rownames_to_column(as.data.frame(acc), var='feature')
 write.table(acc, file = 'acc.tsv', row.names = F, col.names = T, quote = F)
 
 ENRICH_OBJ <- synapser::synStore( synapser::File( 
-  path='ACC Expression', 
+  path='acc.tsv', 
   name = 'ACC Expression',
   parentId=parentid_rosmap ),
   used = syns_used, 
@@ -107,7 +107,7 @@ pcc <- tibble::rownames_to_column(as.data.frame(pcc), var='feature')
 write.table(pcc, file = 'pcc.tsv', row.names = F, col.names = T, quote = F)
 
 ENRICH_OBJ <- synapser::synStore( synapser::File( 
-  path='PCC Expression', 
+  path='pcc.tsv', 
   name = 'PCC Expression',
   parentId=parentid_rosmap ),
   used = syns_used, 
