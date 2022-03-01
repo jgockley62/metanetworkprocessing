@@ -59,7 +59,7 @@ activityName <- 'DLPFC Expression'
 activityDescription <- 'Winzorized DLPFC Expression for metanetwork analysis'
 
 dlpfc <- tibble::rownames_to_column(as.data.frame(dlpfc), var='feature')
-write.table(dlpfc, file = 'dlpfc.tsv', row.names = F, col.names = T, quote = F)
+write.table(dlpfc, file = 'dlpfc.tsv', sep ='\t', row.names = F, col.names = T, quote = F)
 
 ENRICH_OBJ <- synapser::synStore( synapser::File( 
     path='dlpfc.tsv', 
@@ -82,7 +82,7 @@ activityName <- 'ACC Expression'
 activityDescription <- 'Winzorized ACC Expression for metanetwork analysis'
 
 acc <- tibble::rownames_to_column(as.data.frame(acc), var='feature')
-write.table(acc, file = 'acc.tsv', row.names = F, col.names = T, quote = F)
+write.table(acc, file = 'acc.tsv', sep ='\t',  row.names = F, col.names = T, quote = F)
 
 ENRICH_OBJ <- synapser::synStore( synapser::File( 
   path='acc.tsv', 
@@ -105,7 +105,7 @@ activityName <- 'PCC Expression'
 activityDescription <- 'Winzorized PCC Expression for metanetwork analysis'
 
 pcc <- tibble::rownames_to_column(as.data.frame(pcc), var='feature')
-write.table(pcc, file = 'pcc.tsv', row.names = F, col.names = T, quote = F)
+write.table(pcc, file = 'pcc.tsv', sep ='\t', row.names = F, col.names = T, quote = F)
 
 ENRICH_OBJ <- synapser::synStore( synapser::File( 
   path='pcc.tsv', 
