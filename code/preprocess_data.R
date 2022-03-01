@@ -50,7 +50,7 @@ pcc <- rosmap[ ,pcc ] %>%
 #Push to Synapse:
 syns_used <- c(rosmap_exp, rosmap_meta)
 thisFileName <- 'preprocess_data.R'
-thisRepo <- githubr::getRepo(repository = "jgockley62/metanetworkprocessing", ref="branch", refName='master')
+thisRepo <- githubr::getRepo(repository = "jgockley62/metanetworkprocessing", ref="branch", refName='main')
 thisFile <- githubr::getPermlink(repository = thisRepo, repositoryPath=paste0('code/',thisFileName))
 
 #DLPFC
