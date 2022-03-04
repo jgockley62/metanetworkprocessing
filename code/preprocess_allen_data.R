@@ -34,7 +34,7 @@ write.table(micro, file = 'micro.tsv', sep ='\t', row.names = F, col.names = T, 
 
 ENRICH_OBJ <- synapser::synStore( synapser::File( 
   path='micro.tsv', 
-  name = 'microglial Expression',
+  name = 'Microglial Expression',
   parentId=parentid_micro ),
   used = syns_used, 
   activityName = activityName, 
