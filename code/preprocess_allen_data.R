@@ -9,7 +9,8 @@ thisFileName <- 'preprocess_allen_data.R'
 micro <- data.table::fread(synapser::synGet(micro_exp)$path, header = T, sep='\t') %>%
   tibble::column_to_rownames('feature') %>%
   as.matrix() %>%
-  data.frame()
+  data.frame() %>%
+  t()
 
 # Winzorize
 microfo <- micro %>%
