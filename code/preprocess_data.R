@@ -47,7 +47,7 @@ pcc <- colnames(rosmap)[
 pcc <- rosmap[ ,pcc ] %>%
   as.matrix() %>%
   metanetwork::winsorizeData()
-
+  
 #Push to Synapse:
 syns_used <- c(rosmap_exp, rosmap_meta)
 thisFileName <- 'preprocess_data.R'

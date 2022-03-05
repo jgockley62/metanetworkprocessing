@@ -14,8 +14,7 @@ micro <- data.table::fread(synapser::synGet(micro_exp)$path, header = T, sep='\t
 # Winzorize
 microfo <- micro %>%
   as.matrix() %>%
-  metanetwork::winsorizeData() %>%
-  t()
+  metanetwork::winsorizeData()
 
 # Round Float Size
 micro <- round(micro, 6)
