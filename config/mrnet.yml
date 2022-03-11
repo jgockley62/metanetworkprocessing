@@ -1,9 +1,9 @@
 default:
   input_profile:
-    input_synid: syn27409771
+    input_synid: syn27608774
     project_id: syn27410806
     network_method: ["mrnet"]
-    na_fill:
+    na_fill: NULL
     p_val_c3net: 1
     p_val_mrnet: 1
     p_val_wgcna: 1
@@ -31,10 +31,10 @@ default:
         ref_name: main
         repository_path: Network_Wrapper.R
     activity_name: mrnet_microglia
-    activity_description: 'Using the c3net to prepare network from syn27409771 microglia data'
+    activity_description: 'Using the mrnet to prepare network from syn27409771 microglia data'
   output_profile:
-    output_path: c3network
-    md5_output_path: syn21266454_mrnetmd5.out
+    output_path: mrnetnetwork
+    md5_output_path: mrnet_microglia_mrnetmd5.out
     output_name: 'microglia_mrnet Network '
     error_path: /root/error
   computing_specs:
