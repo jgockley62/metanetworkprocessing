@@ -41,3 +41,19 @@ ENRICH_OBJ <- synapser::synStore( synapser::File(
   executed = thisFile, 
   activityDescription = activityDescription
 )
+
+micro <-data.table::transpose(micro)
+write.table(micro, file = 'micro_transpose.tsv', sep ='\t', row.names = F, col.names = T, quote = F)
+
+ENRICH_OBJ <- synapser::synStore( synapser::File( 
+  path='micro_transpose.tsv', 
+  name = 'Microglial Expression Transposed',
+  parentId=parentid_micro ),
+  used = syns_used, 
+  activityName = 'Mircorglial Expression Transposed', 
+  executed = thisFile, 
+  activityDescription = 'Winzorized Mircorglial SMART-Seq2 Expression for metanetwork analysis in Aracne input'
+)
+
+
+
