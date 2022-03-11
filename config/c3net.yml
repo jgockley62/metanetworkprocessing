@@ -3,7 +3,7 @@ default:
     input_synid: syn27409771
     project_id: syn27410806
     network_method: ["c3net"]
-    na_fill: NULL
+    na_fill:
     p_val_c3net: 1
     p_val_mrnet: 1
     p_val_wgcna: 1
@@ -26,14 +26,14 @@ default:
       consortium: AMP-AD
       assay: rnaSeq
     code_annotations:
-        repository: /Reprocessing_Metanetwork_Analysis
+        repository: PradoVarathan/Reprocessing_Metnetwork_Analysis
         ref: branch
         ref_name: main
         repository_path: Network_Wrapper.R
     activity_name: c3net_syn21266454
     activity_description: 'Using the c3net to prepare network from syn21266454 data'
   output_profile:
-    output_path: /root/out
+    output_path: c3network
     md5_output_path: syn21266454_c3netmd5.out
     output_name: 'syn21266454_c3net Network '
     error_path: /root/error
@@ -41,3 +41,4 @@ default:
     light_ncores: 32
     medium_ncores: 0
     heavy_ncores: 0
+

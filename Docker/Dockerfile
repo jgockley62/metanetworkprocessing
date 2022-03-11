@@ -50,6 +50,8 @@ RUN scl enable devtoolset-8 bash \
 RUN R -e "install.packages('PythonEmbedInR', repos=c('http://cran.fhcrc.org', 'http://ran.synapse.org'))" \
 	&& R -e "install.packages('synapser', repos=c('http://ran.synapse.org', 'http://cran.fhcrc.org'))"
 
-# Metanets
+# Githubr
 RUN R -e "install.packages('devtools')" \
-	&& R -e "devtools::install_github('PradoVarathan/metanetwork')"
+	&& R -e "devtools::install_github('brian-bot/githubr')"
+# Metanets
+RUN R -e "devtools::install_github('PradoVarathan/metanetwork')"
