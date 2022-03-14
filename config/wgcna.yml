@@ -26,7 +26,7 @@ default:
       consortium: AMP-AD
       assay: rnaSeq
     code_annotations:
-        repository: PradoVarathan/Reprocessing_Metanetwork_Analysis
+        repository: PradoVarathan/Reprocessing_Metnetwork_Analysis
         ref: branch
         ref_name: main
         repository_path: Network_Wrapper.R
