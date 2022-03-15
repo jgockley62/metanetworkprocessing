@@ -34,10 +34,11 @@ default:
     activity_description: 'Using wgcna to prepare network from syn27409771 microglia data'
   output_profile:
     output_path: /root/out
-    md5_output_path: syn21266454_c3netmd5.out
-    output_name: 'microglia_wgcna Network '
+    md5_output_path: microglia_wgcnamd5.out
+    output_name: 'microglia_wgcna_Network'
     error_path: /root/error
   computing_specs:
     light_ncores: 32
     medium_ncores: 0
     heavy_ncores: 0
+
