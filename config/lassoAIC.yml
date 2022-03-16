@@ -30,12 +30,12 @@ default:
         ref: branch
         ref_name: main
         repository_path: Network_Wrapper.R
-    activity_name: wgcna_microglia
-    activity_description: 'Using wgcna to prepare network from syn27409771 microglia data'
+    activity_name: LassoAIC Microglia
+    activity_description: 'Using LassoAIC to prepare network from syn27409771 microglia data'
   output_profile:
     output_path: /root/out/
-    md5_output_path: syn21266454_lassoAICmd5.out
-    output_name: 'microglia_wgcna_Network'
+    md5_output_path: microglia_lassoAICmd5.out
+    output_name: 'microglia_lassoAIC_Network'
     error_path: /root/error
   computing_specs:
     light_ncores: 0
