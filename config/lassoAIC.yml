@@ -1,6 +1,6 @@
 default:
   input_profile:
-    input_synid: syn27608774
+    input_synid: syn27409771
     project_id: syn27410806
     network_method: ["lassoAIC"]
     na_fill: NULL
